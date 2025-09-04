@@ -1,44 +1,50 @@
 # ml-vs-mpt-optimizer
 
-**Can Machine Learning Beat Modern Portfolio Theory?**
+**Can Machine Learning Beat Modern Portfolio Theory (MPT)?**
 
-## Overview
+## 🚀 Overview
+This project explores whether **machine learning (ML)** can outperform the classical **Modern Portfolio Theory (MPT)** in portfolio optimization.  
+It combines a **modular Python toolkit** with an **interactive Streamlit dashboard** to compare traditional finance methods against ML-driven strategies.
 
-This project investigates whether machine learning (ML) models can outperform classical Modern Portfolio Theory (MPT) in portfolio optimization. It provides a modular Python toolkit and an interactive Streamlit dashboard for comparing traditional and ML-based asset allocation strategies.
-
-## Features
-
-- **Data Fetching:** Retrieve historical stock/ETF price data (e.g., from Yahoo Finance).
-- **Classical Portfolio Optimization:**
-  - Minimum volatility portfolio.
-  - Maximum Sharpe ratio portfolio.
-  - Efficient frontier visualization.
+## 🔑 Features
+- **Data Pipeline:** Fetch historical stock/ETF data (Yahoo Finance).  
+- **Classical Optimization (MPT):**
+  - Minimum Volatility Portfolio
+  - Maximum Sharpe Ratio Portfolio
+  - Efficient Frontier visualization
 - **Machine Learning Models:**
-  - Predict next-day returns using regression, random forest, and LSTM.
-  - Use predicted returns to optimize portfolio allocations.
-- **Backtesting:**
-  - Track portfolio growth over time.
-  - Compute risk metrics: Sharpe ratio, volatility, max drawdown.
+  - Predict next-day returns with Linear Regression, Random Forest, and LSTM.
+  - Use forecasts as inputs for portfolio allocation.
+- **Backtesting & Metrics:**
+  - Portfolio growth, Sharpe ratio, volatility, max drawdown.
+  - Rolling performance analysis for stability checks.
 - **Visualization:**
-  - Compare efficient frontier vs. ML allocations.
-  - Rolling Sharpe ratios and equity curves.
+  - Allocation breakdowns, efficient frontier, equity curves.
 - **Streamlit Dashboard:**
-  - User inputs tickers.
-  - Displays allocations, plots, and comparative metrics.
+  - User-provided tickers → allocations + comparative plots.
 
-## Audience
+## 👥 Audience
+- **Recruiters & Interviewers:** Demonstrates applied quant + ML knowledge.  
+- **Data Science Peers:** End-to-end project with finance + ML integration.  
+- **Investors & Enthusiasts:** Learn how ML might (or might not) improve portfolios.
 
-- Recruiters and interviewers (Quant, AI/ML, SWE).
-- Individual investors curious about ML in finance.
-- Data science peers (portfolio project showcase).
-
-## Deliverables
-
-- Modular Python code (`data`, `optimize`, `backtest`, `viz`).
-- Streamlit app for interactive exploration.
-- Blog post: _Can ML Beat Modern Portfolio Theory?_
+## 📂 Deliverables
+- Modular Python code (`data/`, `optimize/`, `backtest/`, `viz/`).  
+- Streamlit app for interactive exploration.  
+- Reports summarizing each stage (MPT baseline, ML experiments, backtests).  
+- Blog post: *Can ML Beat Modern Portfolio Theory?*  
 
 ---
 
-> **Explore whether machine learning can give you an edge over traditional
+## 📊 Progress So Far
+- **EDA:** Cleaned and analyzed asset returns, volatilities, and correlations.  
+- **Classical MPT:**  
+  - Built Min Vol and Max Sharpe portfolios.  
+  - Found corner solutions (e.g., 63% GLD + 33% NVDA).  
+  - Added 30% cap → more diversification, lower Sharpe.  
+  - Introduced stability metric (Effective N_assets).  
+  - **Insight:** MPT is mathematically optimal but unstable in practice → perfect baseline for ML comparison.  
 
+---
+
+> ⚡ **Next Steps:** Implement ML-based optimizers and compare Sharpe, stability, and robustness against classical MPT.  
